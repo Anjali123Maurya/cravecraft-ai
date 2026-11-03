@@ -4,7 +4,8 @@ Run from the project root:
     python -m scripts.benchmark_llm --models qwen2.5:1.5b --runs 1
 
 Measures: speed, valid JSON, valid schema, use of the user's ingredients,
-and forbidden-ingredient violations (allergy/diet).
+forbidden-ingredient violations (scanned in EVERY field), invented
+ingredients, and number of spices used.
 """
 import argparse
 import json
@@ -20,6 +21,10 @@ from core.schemas import Recipe
 PEANUTS = ["peanut", "groundnut", "moongfali"]
 DAIRY = ["paneer", "ghee", "butter", "milk", "cream", "yogurt", "curd",
          "cheese", "honey"]
+SPICES = ["turmeric", "cumin", "coriander", "garam masala", "chili", "chilli",
+          "pepper", "mustard", "asafoetida", "hing", "cardamom", "cinnamon",
+          "clove", "paprika", "masala", "fenugreek", "kasuri"]
+STAPLES = SPICES + ["salt", "oil", "water", "sugar"]
 
 TEST_CASES = [
     {
@@ -76,8 +81,8 @@ def stem(word: str) -> str:
 
 def run_case(client, model: str, case: dict, num_ctx: int, num_predict: int) -> dict:
     result = {"case": case["name"], "json_ok": False, "schema_ok": False,
-              "pantry_use": 0.0, "violations": [], "tok_s": 0.0,
-              "seconds": 0.0, "error": ""}
+              "pantry_use": 0.0, "violations": [], "invented": [], "spices": 0,
+              "tok_s": 0.0, "seconds": 0.0, "error": ""}
     start = time.perf_counter()
     try:
         resp = client.chat(
@@ -122,8 +127,16 @@ def run_case(client, model: str, case: dict, num_ctx: int, num_predict: int) -> 
     used = sum(stem(i) in text for i in case["ingredients"])
     result["pantry_use"] = used / len(case["ingredients"])
 
-    full_text = (text + " " + " ".join(recipe.steps)).lower()
+    # Scan EVERY field (including missing_ingredients and substitutions).
+    full_text = json.dumps(data).lower()
     result["violations"] = [w for w in case["forbidden"] if w in full_text]
+
+    # Ingredients that are neither the user's, nor a spice, nor a basic staple.
+    allowed = [stem(i) for i in case["ingredients"]] + STAPLES
+    result["invented"] = [i.name for i in recipe.ingredients
+                          if not any(a in i.name.lower() for a in allowed)]
+    result["spices"] = sum(any(s in i.name.lower() for s in SPICES)
+                           for i in recipe.ingredients)
     return result
 
 
@@ -132,13 +145,16 @@ def summarize(model: str, results: list[dict]) -> None:
     ok = [r for r in results if r["schema_ok"]]
     avg = lambda key: sum(r[key] for r in ok) / len(ok) if ok else 0.0
     violations = sum(len(r["violations"]) for r in results)
+    invented = sum(len(r["invented"]) for r in results)
     print(f"\n=== {model}: {n} runs ===")
-    print(f"JSON valid:           {sum(r['json_ok'] for r in results)}/{n}")
-    print(f"Schema valid:         {len(ok)}/{n}")
-    print(f"Avg speed:            {avg('tok_s'):.1f} tokens/s")
-    print(f"Avg time per recipe:  {avg('seconds'):.1f} s")
-    print(f"Uses your ingredients: {avg('pantry_use') * 100:.0f}%")
+    print(f"JSON valid:                {sum(r['json_ok'] for r in results)}/{n}")
+    print(f"Schema valid:              {len(ok)}/{n}")
+    print(f"Avg speed:                 {avg('tok_s'):.1f} tokens/s")
+    print(f"Avg time per recipe:       {avg('seconds'):.1f} s")
+    print(f"Uses your ingredients:     {avg('pantry_use') * 100:.0f}%")
     print(f"Forbidden-ingredient hits: {violations}")
+    print(f"Invented ingredients:      {invented}")
+    print(f"Avg spices per recipe:     {avg('spices'):.1f}")
 
 
 def main() -> None:
@@ -160,7 +176,9 @@ def main() -> None:
                 status = "OK" if r["schema_ok"] else f"FAIL ({r['error']})"
                 print(f"  {case['name']} run {run + 1}: {status} | "
                       f"{r['seconds']:.0f}s | {r['tok_s']:.1f} tok/s | "
-                      f"violations: {r['violations'] or 'none'}")
+                      f"violations: {r['violations'] or 'none'} | "
+                      f"invented: {r['invented'] or 'none'} | "
+                      f"spices: {r['spices']}")
         summarize(model, results)
 
 
