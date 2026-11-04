@@ -35,3 +35,11 @@ class Recipe(BaseModel):
     @property
     def total_time_min(self) -> int:
         return self.prep_time_min + self.cook_time_min
+    
+
+
+class Adaptation(BaseModel):
+    """The only thing the LLM is allowed to write."""
+    description: str = Field(min_length=10, max_length=300)
+    tips: list[str] = Field(default_factory=list, max_length=4)
+    substitutions: list[str] = Field(default_factory=list, max_length=4)
