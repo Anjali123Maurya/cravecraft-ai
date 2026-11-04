@@ -148,3 +148,27 @@ def filter_ingredients(names: list[str], profile: SafetyProfile):
         else:
             allowed.append(name)
     return allowed, blocked
+def strip_unsafe_optional(recipe: Recipe, profile: SafetyProfile) -> Recipe:
+    """Drop tips and substitutions that mention forbidden items.
+
+    Ingredients and steps are NOT touched: if those are unsafe, the recipe
+    must be rejected, not quietly edited.
+    """
+    def keep(lines: list[str]) -> list[str]:
+        return [line for line in lines if not check_text(line, profile)]
+
+    return recipe.model_copy(update={
+        "tips": keep(recipe.tips),
+        "substitutions": keep(recipe.substitutions),
+    })
+
+
+def safe_recipes(recipes, profile: SafetyProfile) -> list:
+    """Return the recipes that are safe for this profile, after removing
+    unsafe optional tips/substitutions from each one."""
+    result = []
+    for recipe in recipes:
+        cleaned = strip_unsafe_optional(recipe, profile)
+        if not check_recipe(cleaned, profile):
+            result.append(cleaned)
+    return result   

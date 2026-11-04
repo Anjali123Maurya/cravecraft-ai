@@ -85,3 +85,13 @@ def test_invalid_profile_values_rejected():
         SafetyProfile(diet="carnivore")
     with pytest.raises(ValidationError):
         SafetyProfile(allergens=["pollen"])
+        
+def test_safe_recipes_drops_only_optional_mentions():
+    from core.knowledge.loader import load_seed_recipes
+    from core.safety.filter import safe_recipes
+
+    ids = {r.id for r in safe_recipes(load_seed_recipes(), SafetyProfile(diet="vegan"))}
+    assert {"dal-tadka", "jeera-rice", "moong-dal-khichdi"} <= ids
+    assert "palak-paneer" not in ids
+    assert "gujarati-kadhi" not in ids
+    assert "paneer-bhurji" not in ids
