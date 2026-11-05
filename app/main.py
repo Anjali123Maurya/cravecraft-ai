@@ -6,7 +6,7 @@ Run from the project root:
 import sys
 from pathlib import Path
 
-# Make `core` and `app` importable when Streamlit runs this file.
+# Make `core`, `app` and `db` importable when Streamlit runs this file.
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import streamlit as st  # noqa: E402
@@ -21,6 +21,7 @@ from core.safety.allergens import ALLERGEN_LABELS  # noqa: E402
 from core.safety.diet_rules import DIETS  # noqa: E402
 from core.safety.filter import (SafetyProfile, filter_ingredients,  # noqa: E402
                                 safe_recipes)
+from db.session import get_store  # noqa: E402
 
 CRAVINGS = {
     "🌶️ Spicy": "spicy", "🍋 Tangy": "tangy", "🧈 Creamy": "creamy",
@@ -72,6 +73,11 @@ st.markdown("#### 🥕 What's in your kitchen?")
 pantry_text = st.text_area("Ingredients", height=90, label_visibility="collapsed",
                            placeholder="potatoes, onion, tomato, paneer, capsicum ...")
 
+saved_count = len(get_store().list_pantry())
+include_saved = st.checkbox(
+    f"➕ Also use my saved pantry ({saved_count} item{'s' if saved_count != 1 else ''})",
+    value=saved_count > 0, disabled=saved_count == 0)
+
 st.markdown("#### 😋 What are you craving?")
 picked = st.pills("Cravings", list(CRAVINGS), selection_mode="multi",
                   label_visibility="collapsed")
@@ -80,6 +86,8 @@ time_label = st.selectbox("⏱️ Time available", list(TIME_OPTIONS))
 
 if st.button("🍳  Find my recipe", type="primary"):
     items = parse_list(pantry_text)
+    if include_saved:
+        items += [i.name for i in get_store().list_pantry()]
     if not items:
         st.warning("Please type at least one ingredient.")
     else:
@@ -90,13 +98,16 @@ if st.button("🍳  Find my recipe", type="primary"):
             st.error(f"Invalid food rules: {exc}")
             st.stop()
         allowed, blocked = filter_ingredients(items, profile)
-        recent = st.session_state.setdefault("recent_ids", [])
+        store = get_store()
         prefs = Preferences(pantry=allowed,
                             cravings=[CRAVINGS[c] for c in (picked or [])],
                             max_total_minutes=TIME_OPTIONS[time_label],
-                            recent_ids=list(recent))
-        ranked = rank_recipes(safe_recipes(load_seed_recipes(), profile), prefs,
-                              top_n=3, min_coverage=0.25)
+                            recent_ids=store.recent_recipe_ids(),
+                            use_first=[i.name for i in store.expiring_soon()])
+        candidates = safe_recipes(load_seed_recipes(), profile)
+        ranked = rank_recipes(candidates, prefs, top_n=3, min_coverage=0.25)
+        if len(ranked) < 3:  # relax the rule so the user sees more choices
+            ranked = rank_recipes(candidates, prefs, top_n=3, min_coverage=0.1)
         st.session_state.update(profile=profile, prefs=prefs, ranked=ranked,
                                 blocked=blocked, adapted={}, searched=True,
                                 chosen_id=ranked[0].recipe.id if ranked else None)
@@ -139,13 +150,19 @@ if chosen_id not in adapted_cache:
                     "seconds while the model loads)..."):
         llm = LLMClient() if use_ai else NoAI()
         adapted_cache[chosen_id] = adapt_recipe(match, prefs, profile, llm=llm)
-    recent = st.session_state.setdefault("recent_ids", [])
-    if chosen_id not in recent:
-        recent.append(chosen_id)
+    get_store().add_history(chosen_id, match.recipe.name)
 result = adapted_cache[chosen_id]
 recipe = result.recipe
 
 st.markdown(ui.banner(recipe, result.used_llm), unsafe_allow_html=True)
+
+store = get_store()
+if store.is_favorite(recipe.id):
+    st.success("❤️ Saved in your favorites. Rate it on the Favorites page.")
+elif st.button("🤍 Save to favorites", key=f"fav_{recipe.id}", type="primary"):
+    store.save_favorite(recipe.id, recipe.name)
+    st.rerun()
+
 if use_ai:
     for warning in result.warnings:
         st.warning(warning)

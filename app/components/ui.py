@@ -7,10 +7,10 @@ from html import escape
 
 RECIPE_EMOJI = {
     "dal-tadka": "🍲", "aloo-matar": "🥔", "aloo-gobi": "🥦",
-    "palak-paneer": "🥬", "chana-masala": "🫘", "rajma": "🫘",
-    "bhindi-masala": "🌿", "jeera-rice": "🍚", "sambar": "🍲",
-    "lemon-rice": "🍋", "poha": "🍛", "upma": "🥣", "gujarati-kadhi": "🥣",
-    "baingan-bharta": "🍆", "paneer-bhurji": "🧀", "moong-dal-khichdi": "🍚",
+    "palak-paneer": "🥬", "chana-masala": "🥘", "rajma": "🫘",
+    "bhindi-masala": "🌿", "jeera-rice": "🍚", "sambar": "🍜",
+    "lemon-rice": "🍋", "poha": "🍛", "upma": "🥣", "gujarati-kadhi": "🥛",
+    "baingan-bharta": "🍆", "paneer-bhurji": "🧀", "moong-dal-khichdi": "🫕",
 }
 
 REGION_GRADIENT = {

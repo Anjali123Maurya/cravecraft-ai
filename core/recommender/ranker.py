@@ -26,6 +26,7 @@ class Preferences:
     max_total_minutes: int | None = None
     difficulty: str | None = None  # "easy" | "medium" | "hard" | None
     recent_ids: list[str] = field(default_factory=list)
+    use_first: list[str] = field(default_factory=list)  # items expiring soon
 
 
 @dataclass
@@ -88,6 +89,13 @@ def score_recipe(recipe: SeedRecipe, prefs: Preferences) -> Match | None:
     if prefs.difficulty and recipe.difficulty == prefs.difficulty:
         score += 5
 
+    # Bonus for recipes that use up ingredients that expire soon.
+    urgent = canonical_all(prefs.use_first)
+    uses_up = [m for m in have if m in urgent]
+    if uses_up:
+        score += min(10 * len(uses_up), 20)
+        reasons.append("uses up " + ", ".join(uses_up))
+
     if recipe.id in prefs.recent_ids:
         score -= 30
         reasons.append("shown recently")
@@ -100,4 +108,4 @@ def rank_recipes(recipes, prefs: Preferences, top_n: int = 5,
     matches = [m for r in recipes if (m := score_recipe(r, prefs))
                and m.coverage >= min_coverage]
     matches.sort(key=lambda m: m.score, reverse=True)
-    return matches[:top_n]  
+    return matches[:top_n]
