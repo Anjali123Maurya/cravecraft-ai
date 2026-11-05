@@ -194,3 +194,16 @@ def steps(step_list) -> str:
 def notes(lines, sub: bool = False) -> str:
     cls = "note sub" if sub else "note"
     return "".join(f'<div class="{cls}">{escape(line)}</div>' for line in lines)
+
+def nutrition_box(n) -> str:
+    items = [("🔥", f"{n.kcal:.0f}", "kcal"), ("💪", f"{n.protein:.0f} g", "protein"),
+             ("🍞", f"{n.carbs:.0f} g", "carbs"), ("🧈", f"{n.fat:.0f} g", "fat"),
+             ("🌾", f"{n.fiber:.0f} g", "fiber")]
+    inner = "".join(f'<div class="stat"><div class="v">{e} {v}</div>'
+                    f'<div class="l">{l}</div></div>' for e, v, l in items)
+    warn = (" Some ingredients were not found, so this is rough."
+            if n.is_rough else "")
+    return (f'<div class="stats">{inner}</div>'
+            f'<div style="color:#8a7466;font-size:.82rem;margin-bottom:10px">'
+            f'Estimate per serving from approximate reference values.{escape(warn)} '
+            f'Not medical advice.</div>')

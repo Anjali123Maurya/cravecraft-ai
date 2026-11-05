@@ -22,6 +22,7 @@ from core.safety.diet_rules import DIETS  # noqa: E402
 from core.safety.filter import (SafetyProfile, filter_ingredients,  # noqa: E402
                                 safe_recipes)
 from db.session import get_store  # noqa: E402
+from core.services.nutrition import estimate_nutrition  # noqa: E402
 
 CRAVINGS = {
     "🌶️ Spicy": "spicy", "🍋 Tangy": "tangy", "🧈 Creamy": "creamy",
@@ -189,6 +190,14 @@ with right:
     st.markdown("### 👩‍🍳 Steps")
     st.markdown(ui.steps(recipe.steps), unsafe_allow_html=True)
 
+st.markdown("### 🥗 Nutrition (estimate per serving)")
+st.markdown(ui.nutrition_box(estimate_nutrition(recipe)), unsafe_allow_html=True)
+with st.expander("What was counted?"):
+    n = estimate_nutrition(recipe)
+    st.write(f"Matched {len(n.matched)} ingredients ({n.coverage:.0%}).")
+    if n.unmatched:
+        st.write("Not found: " + ", ".join(n.unmatched))
+        
 if recipe.tips:
     st.markdown("### 💡 Tips")
     st.markdown(ui.notes(recipe.tips), unsafe_allow_html=True)
