@@ -9,7 +9,7 @@ from pathlib import Path
 
 from core.schemas import Recipe
 
-SEED_PATH = Path(__file__).with_name("recipes_seed.json")
+SEED_FILES = ("recipes_seed.json", "recipes_more.json")
 
 
 class SeedRecipe(Recipe):
@@ -19,5 +19,9 @@ class SeedRecipe(Recipe):
 
 @lru_cache
 def load_seed_recipes() -> tuple[SeedRecipe, ...]:
-    data = json.loads(SEED_PATH.read_text(encoding="utf-8"))
-    return tuple(SeedRecipe.model_validate(item) for item in data)
+    recipes = []
+    for name in SEED_FILES:
+        path = Path(__file__).with_name(name)
+        data = json.loads(path.read_text(encoding="utf-8"))
+        recipes += [SeedRecipe.model_validate(item) for item in data]
+    return tuple(recipes)

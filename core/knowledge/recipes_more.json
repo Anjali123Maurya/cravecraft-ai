@@ -1,0 +1,479 @@
+[
+  {
+    "id": "dosa", "region": "South Indian", "name": "Crispy Dosa with Coconut Chutney",
+    "description": "Thin, golden fermented-batter crepes served with a fresh coconut and green chilli chutney.",
+    "cuisine": "Indian", "flavor_profile": ["crunchy", "light", "savory"],
+    "prep_time_min": 15, "cook_time_min": 20, "difficulty": "medium", "servings": 3,
+    "ingredients": [
+      {"name": "dosa batter", "quantity": 3, "unit": "cup"},
+      {"name": "oil", "quantity": 3, "unit": "tbsp"},
+      {"name": "grated coconut", "quantity": 0.5, "unit": "cup"},
+      {"name": "roasted chana dal", "quantity": 2, "unit": "tbsp"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "mustard seeds", "quantity": 0.5, "unit": "tsp"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Blend the coconut, roasted chana dal, green chillies, salt and a little water into a smooth chutney.",
+      "Heat 1 tsp oil, add mustard seeds, asafoetida and curry leaves. When the seeds pop, pour this over the chutney.",
+      "Heat a flat pan on medium-high until a drop of water sizzles. Wipe it with an oiled cloth.",
+      "Pour a ladle of batter in the centre and spread it outward in circles to make a thin round.",
+      "Drizzle oil around the edges and cook for 2-3 minutes until the underside is golden and crisp.",
+      "Fold and serve hot with the chutney."
+    ],
+    "tips": ["The pan must be hot before you pour, or the dosa tears.", "Batter that is too thick makes soft, not crisp, dosas. Thin it with a little water."],
+    "substitutions": ["No fresh coconut? Use 3 tbsp of roasted peanuts or extra roasted chana dal for the chutney."]
+  },
+  {
+    "id": "podi-idli", "region": "South Indian", "name": "Podi Idli",
+    "description": "Soft steamed idlis tossed in a hot, fragrant tempering with idli podi.",
+    "cuisine": "Indian", "flavor_profile": ["spicy", "savory", "comforting"],
+    "prep_time_min": 5, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "idli batter", "quantity": 2, "unit": "cup"},
+      {"name": "idli podi", "quantity": 2, "unit": "tbsp"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 0.5, "unit": "tsp"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "salt", "quantity": 0.5, "unit": "tsp"}
+    ],
+    "steps": [
+      "Grease the idli moulds. Pour batter into each mould.",
+      "Steam the idlis on medium heat for 10-12 minutes, until a toothpick comes out clean.",
+      "Let them rest for 2 minutes, then cut each idli into quarters.",
+      "Heat oil in a pan. Add mustard seeds, and when they pop add curry leaves and asafoetida.",
+      "Add the idli pieces and idli podi. Toss on medium heat for 2-3 minutes until coated and lightly crisp at the edges."
+    ],
+    "tips": ["Day-old idlis work best because they stay firm when tossed.", "Mix the podi with a little oil first for a smoother coating."],
+    "substitutions": ["No idli podi? Mix 1 tsp red chilli powder with 1 tbsp roasted chana dal powder and a pinch of salt."]
+  },
+  {
+    "id": "pav-bhaji", "region": "Maharashtrian", "name": "Pav Bhaji",
+    "description": "A buttery, mashed vegetable curry with pav bhaji masala, served with toasted bread rolls.",
+    "cuisine": "Indian", "flavor_profile": ["spicy", "savory", "comforting"],
+    "prep_time_min": 15, "cook_time_min": 30, "difficulty": "medium", "servings": 4,
+    "ingredients": [
+      {"name": "potato", "quantity": 3, "unit": "piece"},
+      {"name": "cauliflower", "quantity": 1, "unit": "cup"},
+      {"name": "green peas", "quantity": 0.5, "unit": "cup"},
+      {"name": "onion", "quantity": 2, "unit": "piece"},
+      {"name": "tomato", "quantity": 3, "unit": "piece"},
+      {"name": "capsicum", "quantity": 1, "unit": "piece"},
+      {"name": "butter", "quantity": 3, "unit": "tbsp"},
+      {"name": "pav bhaji masala", "quantity": 2, "unit": "tbsp"},
+      {"name": "red chilli powder", "quantity": 1, "unit": "tsp"},
+      {"name": "turmeric powder", "quantity": 0.25, "unit": "tsp"},
+      {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+      {"name": "pav (bread rolls)", "quantity": 8, "unit": "piece"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Chop the potatoes, cauliflower and capsicum. Boil the potatoes, cauliflower and peas with salt for 15 minutes until very soft, then mash roughly.",
+      "Heat 2 tbsp butter in a wide pan. Add chopped onions and cook for 5 minutes until soft and golden.",
+      "Add the capsicum and tomatoes. Cook for 6-8 minutes until the tomatoes turn mushy.",
+      "Add turmeric, chilli powder and pav bhaji masala and stir for 1 minute.",
+      "Add the mashed vegetables with 1 cup of water. Mash everything together and simmer for 10 minutes.",
+      "Finish with lemon juice and coriander leaves. Toast the pav in the remaining butter and serve."
+    ],
+    "tips": ["Mashing with the back of a spoon in the pan gives the classic rough texture.", "A little extra butter on top at serving makes it taste restaurant-style."],
+    "substitutions": ["Use oil instead of butter for a vegan bhaji, and oil on the pav."]
+  },
+  {
+    "id": "veg-pulao", "region": "North Indian", "name": "Vegetable Pulao",
+    "description": "Fragrant basmati rice cooked with vegetables and whole spices.",
+    "cuisine": "Indian", "flavor_profile": ["mild", "savory", "comforting"],
+    "prep_time_min": 20, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "basmati rice", "quantity": 1, "unit": "cup"},
+      {"name": "mixed vegetables (carrot, beans, peas)", "quantity": 1, "unit": "cup"},
+      {"name": "onion", "quantity": 1, "unit": "piece"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "bay leaf", "quantity": 1, "unit": "piece"},
+      {"name": "cloves", "quantity": 3, "unit": "piece"},
+      {"name": "cinnamon stick", "quantity": 1, "unit": "inch"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "garam masala", "quantity": 0.5, "unit": "tsp"},
+      {"name": "water", "quantity": 1.75, "unit": "cup"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Wash the rice until the water runs clear and soak for 20 minutes. Drain.",
+      "Heat oil in a pot. Add cumin seeds, bay leaf, cloves and cinnamon and let them sizzle for 20 seconds.",
+      "Add sliced onion and green chillies. Cook for 4-5 minutes until golden.",
+      "Add the vegetables and cook for 2 minutes. Add the drained rice and gently fry for 1 minute.",
+      "Add water, salt and garam masala. Bring to a boil.",
+      "Cover tightly, reduce to the lowest heat and cook for 12-15 minutes. Rest 5 minutes, then fluff with a fork."
+    ],
+    "tips": ["Do not stir once the lid is on or the rice turns sticky.", "Use 1.75 cups of water per cup of soaked basmati."],
+    "substitutions": ["Frozen mixed vegetables work; add them straight to the pot."]
+  },
+  {
+    "id": "dhokla", "region": "Gujarati", "name": "Khaman Dhokla",
+    "description": "Soft, spongy steamed gram flour cakes topped with a mustard and curry leaf tempering.",
+    "cuisine": "Indian", "flavor_profile": ["light", "tangy", "fresh"],
+    "prep_time_min": 15, "cook_time_min": 20, "difficulty": "medium", "servings": 4,
+    "ingredients": [
+      {"name": "besan (gram flour)", "quantity": 1, "unit": "cup"},
+      {"name": "yogurt (curd)", "quantity": 0.25, "unit": "cup"},
+      {"name": "water", "quantity": 0.75, "unit": "cup"},
+      {"name": "ginger", "quantity": 1, "unit": "inch"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "turmeric powder", "quantity": 0.25, "unit": "tsp"},
+      {"name": "sugar", "quantity": 1, "unit": "tbsp"},
+      {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+      {"name": "fruit salt (Eno)", "quantity": 1, "unit": "tsp"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"}
+    ],
+    "steps": [
+      "Grease a steaming plate. Boil water in a steamer.",
+      "Whisk besan, yogurt, water, grated ginger, chopped chilli, turmeric, sugar, lemon juice and salt into a smooth, lump-free batter.",
+      "Rest the batter for 10 minutes. Add the fruit salt and 1 tsp water, stir gently once and pour into the plate immediately.",
+      "Steam covered on medium heat for 12-15 minutes, until a toothpick comes out clean.",
+      "Heat oil, add mustard seeds and curry leaves, then add 3 tbsp water and pour over the dhokla.",
+      "Cool for 5 minutes, cut into squares and serve."
+    ],
+    "tips": ["Add the fruit salt last and steam immediately, or the dhokla will not rise.", "Do not over-stir after adding the fruit salt."],
+    "substitutions": ["No yogurt? Use 1 tbsp lemon juice and a little extra water."]
+  },
+  {
+    "id": "matar-paneer", "region": "Punjabi", "name": "Matar Paneer",
+    "description": "Soft paneer cubes and green peas in a rich, mildly spiced tomato gravy.",
+    "cuisine": "Indian", "flavor_profile": ["creamy", "savory", "mildly spicy"],
+    "prep_time_min": 10, "cook_time_min": 25, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "paneer", "quantity": 200, "unit": "g"},
+      {"name": "green peas", "quantity": 1, "unit": "cup"},
+      {"name": "onion", "quantity": 2, "unit": "piece"},
+      {"name": "tomato", "quantity": 3, "unit": "piece"},
+      {"name": "oil", "quantity": 3, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "ginger garlic paste", "quantity": 1, "unit": "tbsp"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "coriander powder", "quantity": 1, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 0.75, "unit": "tsp"},
+      {"name": "garam masala", "quantity": 0.5, "unit": "tsp"},
+      {"name": "kasuri methi", "quantity": 1, "unit": "tsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"},
+      {"name": "water", "quantity": 1, "unit": "cup"}
+    ],
+    "steps": [
+      "Blend the onions and tomatoes separately into smooth purees. Cut the paneer into cubes.",
+      "Heat oil, add cumin seeds, then the onion puree. Cook for 8 minutes until golden, stirring often.",
+      "Add ginger garlic paste and cook for 1 minute. Add the tomato puree, turmeric, coriander powder, chilli powder and salt.",
+      "Cook for 8-10 minutes until the oil separates from the masala.",
+      "Add the peas and water. Simmer covered for 8 minutes.",
+      "Add the paneer, garam masala and crushed kasuri methi. Simmer for 3 minutes and serve."
+    ],
+    "tips": ["Rub the kasuri methi between your palms before adding it to release its aroma.", "Soak the paneer in warm water for 10 minutes first to keep it soft."],
+    "substitutions": ["Use firm tofu for a vegan version; add a splash of coconut milk for richness."]
+  },
+  {
+    "id": "kadai-paneer", "region": "Punjabi", "name": "Kadai Paneer",
+    "description": "Paneer and capsicum tossed in a thick, freshly ground spice masala.",
+    "cuisine": "Indian", "flavor_profile": ["spicy", "smoky", "savory"],
+    "prep_time_min": 10, "cook_time_min": 20, "difficulty": "medium", "servings": 3,
+    "ingredients": [
+      {"name": "paneer", "quantity": 200, "unit": "g"},
+      {"name": "capsicum", "quantity": 1, "unit": "piece"},
+      {"name": "onion", "quantity": 1, "unit": "piece"},
+      {"name": "tomato", "quantity": 3, "unit": "piece"},
+      {"name": "oil", "quantity": 3, "unit": "tbsp"},
+      {"name": "coriander seeds", "quantity": 1, "unit": "tbsp"},
+      {"name": "dried red chilli", "quantity": 3, "unit": "piece"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "ginger garlic paste", "quantity": 1, "unit": "tsp"},
+      {"name": "garam masala", "quantity": 0.5, "unit": "tsp"},
+      {"name": "kasuri methi", "quantity": 1, "unit": "tsp"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"}
+    ],
+    "steps": [
+      "Dry roast the coriander seeds, dried red chillies and half the cumin for 1-2 minutes until fragrant. Crush coarsely to make the kadai masala.",
+      "Cut the paneer, capsicum and onion into large squares. Chop the tomatoes.",
+      "Heat oil, add the remaining cumin and ginger garlic paste. Fry for 30 seconds.",
+      "Add the tomatoes and salt and cook for 8 minutes until soft and pulpy.",
+      "Add the kadai masala, onion and capsicum. Stir on high heat for 3-4 minutes so they stay slightly crunchy.",
+      "Add the paneer, garam masala and kasuri methi. Toss for 2 minutes and garnish with coriander leaves."
+    ],
+    "tips": ["Keep the heat high and the vegetables chunky. That is what makes it kadai style.", "Freshly crushed spices give a much stronger aroma than packaged powder."],
+    "substitutions": ["Use 2 tsp of coriander powder and 1 tsp red chilli powder if you cannot roast whole spices."]
+  },
+  {
+    "id": "aloo-paratha", "region": "Punjabi", "name": "Aloo Paratha",
+    "description": "Whole wheat flatbread stuffed with a spiced mashed potato filling.",
+    "cuisine": "Indian", "flavor_profile": ["comforting", "savory", "mildly spicy"],
+    "prep_time_min": 25, "cook_time_min": 20, "difficulty": "medium", "servings": 3,
+    "ingredients": [
+      {"name": "wheat flour (atta)", "quantity": 2, "unit": "cup"},
+      {"name": "potato", "quantity": 3, "unit": "piece"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "coriander leaves", "quantity": 3, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "garam masala", "quantity": 0.5, "unit": "tsp"},
+      {"name": "amchur powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "oil", "quantity": 4, "unit": "tbsp"},
+      {"name": "water", "quantity": 0.75, "unit": "cup"},
+      {"name": "salt", "quantity": 1.25, "unit": "tsp"}
+    ],
+    "steps": [
+      "Knead the flour with water, 1 tbsp oil and 0.5 tsp salt into a soft dough. Cover and rest for 15 minutes.",
+      "Boil the potatoes for 15 minutes, peel and mash them completely with no lumps.",
+      "Mix in chopped chillies, coriander leaves, cumin, chilli powder, garam masala, amchur and the remaining salt.",
+      "Roll a dough ball into a small circle, place a spoon of filling in the centre, seal the edges and flatten gently.",
+      "Roll it out evenly with light pressure to about 15 cm across.",
+      "Cook on a hot griddle for 1-2 minutes per side, brushing with oil, until golden brown spots appear."
+    ],
+    "tips": ["Cool the potatoes fully before mixing the filling, or the dough turns soggy.", "Keep the filling dry. Moist filling tears the paratha."],
+    "substitutions": ["Add finely grated cauliflower or paneer to the filling for variety."]
+  },
+  {
+    "id": "veg-biryani", "region": "North Indian", "name": "Vegetable Biryani",
+    "description": "Layered basmati rice and spiced vegetables, slow-steamed with mint and whole spices.",
+    "cuisine": "Indian", "flavor_profile": ["spicy", "savory", "smoky"],
+    "prep_time_min": 30, "cook_time_min": 40, "difficulty": "hard", "servings": 4,
+    "ingredients": [
+      {"name": "basmati rice", "quantity": 1.5, "unit": "cup"},
+      {"name": "mixed vegetables (carrot, beans, peas, cauliflower)", "quantity": 2, "unit": "cup"},
+      {"name": "onion", "quantity": 2, "unit": "piece"},
+      {"name": "tomato", "quantity": 2, "unit": "piece"},
+      {"name": "yogurt (curd)", "quantity": 0.5, "unit": "cup"},
+      {"name": "mint leaves", "quantity": 0.5, "unit": "cup"},
+      {"name": "ginger garlic paste", "quantity": 1, "unit": "tbsp"},
+      {"name": "oil", "quantity": 4, "unit": "tbsp"},
+      {"name": "biryani masala", "quantity": 2, "unit": "tsp"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 1, "unit": "tsp"},
+      {"name": "bay leaf", "quantity": 1, "unit": "piece"},
+      {"name": "cloves", "quantity": 4, "unit": "piece"},
+      {"name": "cinnamon stick", "quantity": 1, "unit": "inch"},
+      {"name": "salt", "quantity": 2, "unit": "tsp"},
+      {"name": "water", "quantity": 6, "unit": "cup"}
+    ],
+    "steps": [
+      "Wash and soak the rice for 30 minutes. Boil 6 cups of water with 1 tsp salt, the bay leaf, cloves and cinnamon.",
+      "Cook the rice in this water for 6-7 minutes until 70 percent done. Drain and keep aside.",
+      "Slice the onions and fry in oil for 10 minutes until deep brown. Take out half for layering.",
+      "To the pan add ginger garlic paste, tomatoes, turmeric, chilli powder, biryani masala and the vegetables. Cook for 5 minutes.",
+      "Add yogurt, half the mint and salt. Cook for 10 minutes until the vegetables are nearly tender and the gravy is thick.",
+      "Layer the rice over the vegetables. Top with the fried onions and the remaining mint.",
+      "Cover with a tight lid and steam on the lowest heat for 20 minutes. Rest for 10 minutes before mixing gently."
+    ],
+    "tips": ["Parboil the rice only to 70 percent. It finishes cooking in the steam.", "Seal the lid edges with dough or foil so the steam stays inside."],
+    "substitutions": ["No biryani masala? Use 1 tsp garam masala plus 0.5 tsp coriander powder."]
+  },
+  {
+    "id": "masoor-dal", "region": "North Indian", "name": "Masoor Dal Tadka",
+    "description": "Quick-cooking red lentils finished with a garlic and cumin tempering.",
+    "cuisine": "Indian", "flavor_profile": ["comforting", "savory", "mildly spicy"],
+    "prep_time_min": 5, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "masoor dal (red lentils)", "quantity": 1, "unit": "cup"},
+      {"name": "water", "quantity": 3, "unit": "cup"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "onion", "quantity": 1, "unit": "piece"},
+      {"name": "tomato", "quantity": 1, "unit": "piece"},
+      {"name": "garlic", "quantity": 4, "unit": "clove"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"}
+    ],
+    "steps": [
+      "Wash the dal and boil it with water, turmeric and salt for 15 minutes until soft and mushy. No soaking is needed.",
+      "Whisk the dal lightly to a smooth consistency.",
+      "Heat oil, add cumin seeds, then chopped garlic. Fry until light golden.",
+      "Add chopped onion and cook for 4 minutes. Add tomato and chilli powder and cook for 3-4 minutes until soft.",
+      "Pour the tempering into the dal, simmer for 3 minutes and garnish with coriander leaves."
+    ],
+    "tips": ["Skim the foam off the top as the dal boils.", "Squeeze in a little lemon at the end for brightness."],
+    "substitutions": ["Use moong dal in place of masoor dal if you prefer."]
+  },
+  {
+    "id": "methi-thepla", "region": "Gujarati", "name": "Methi Thepla",
+    "description": "Soft, spiced Gujarati flatbreads made with fresh fenugreek leaves and gram flour.",
+    "cuisine": "Indian", "flavor_profile": ["savory", "mildly spicy", "light"],
+    "prep_time_min": 20, "cook_time_min": 20, "difficulty": "medium", "servings": 4,
+    "ingredients": [
+      {"name": "wheat flour (atta)", "quantity": 1.5, "unit": "cup"},
+      {"name": "besan (gram flour)", "quantity": 0.25, "unit": "cup"},
+      {"name": "fresh fenugreek leaves (methi)", "quantity": 1, "unit": "cup"},
+      {"name": "yogurt (curd)", "quantity": 0.25, "unit": "cup"},
+      {"name": "ginger", "quantity": 1, "unit": "inch"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "coriander powder", "quantity": 1, "unit": "tsp"},
+      {"name": "ajwain", "quantity": 0.5, "unit": "tsp"},
+      {"name": "oil", "quantity": 4, "unit": "tbsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Wash and finely chop the fenugreek leaves. Grind the ginger and green chillies into a paste.",
+      "Mix the atta, besan, fenugreek, ginger chilli paste, turmeric, chilli powder, coriander powder, ajwain, salt, yogurt and 1 tbsp oil.",
+      "Knead into a soft dough, adding a little water as needed. Rest for 15 minutes.",
+      "Divide into small balls and roll each into a thin round.",
+      "Cook on a hot griddle for 1-2 minutes per side, brushing with oil, until brown spots appear."
+    ],
+    "tips": ["Roll thin so the theplas stay soft and keep well for travel.", "Salt the leaves and squeeze out the moisture if they release too much water."],
+    "substitutions": ["Use dried fenugreek leaves (2 tbsp kasuri methi) if fresh methi is unavailable."]
+  },
+  {
+    "id": "veg-korma", "region": "North Indian", "name": "Vegetable Korma",
+    "description": "Mixed vegetables in a mild, creamy coconut and cashew gravy.",
+    "cuisine": "Indian", "flavor_profile": ["creamy", "mild", "comforting"],
+    "prep_time_min": 15, "cook_time_min": 30, "difficulty": "medium", "servings": 4,
+    "ingredients": [
+      {"name": "mixed vegetables (carrot, beans, peas, cauliflower)", "quantity": 3, "unit": "cup"},
+      {"name": "onion", "quantity": 2, "unit": "piece"},
+      {"name": "tomato", "quantity": 1, "unit": "piece"},
+      {"name": "grated coconut", "quantity": 0.5, "unit": "cup"},
+      {"name": "cashew", "quantity": 10, "unit": "piece"},
+      {"name": "ginger garlic paste", "quantity": 1, "unit": "tbsp"},
+      {"name": "oil", "quantity": 3, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "cardamom", "quantity": 2, "unit": "piece"},
+      {"name": "cloves", "quantity": 3, "unit": "piece"},
+      {"name": "cinnamon stick", "quantity": 1, "unit": "inch"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "coriander powder", "quantity": 1, "unit": "tsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"},
+      {"name": "water", "quantity": 2, "unit": "cup"}
+    ],
+    "steps": [
+      "Blend the coconut and cashews with a little water into a smooth paste.",
+      "Heat oil, add cumin, cardamom, cloves and cinnamon. Add sliced onions and cook for 6-8 minutes until light golden.",
+      "Add ginger garlic paste and cook for 1 minute. Add chopped tomato, turmeric, coriander powder and salt and cook until soft.",
+      "Add the vegetables and water. Cover and cook for 12-15 minutes until tender.",
+      "Stir in the coconut cashew paste and simmer for 5 minutes, adding water if too thick."
+    ],
+    "tips": ["Do not boil hard after adding the paste, or it can split.", "Keep the onions light in color for a pale, creamy korma."],
+    "substitutions": ["No cashews? Use 1 tbsp of poppy seeds or extra coconut."]
+  },
+  {
+    "id": "bisi-bele-bath", "region": "South Indian", "name": "Bisi Bele Bath",
+    "description": "A hearty Karnataka rice, lentil and vegetable one-pot with tamarind and a signature spice powder.",
+    "cuisine": "Indian", "flavor_profile": ["tangy", "spicy", "comforting"],
+    "prep_time_min": 15, "cook_time_min": 40, "difficulty": "medium", "servings": 4,
+    "ingredients": [
+      {"name": "rice", "quantity": 0.75, "unit": "cup"},
+      {"name": "toor dal", "quantity": 0.5, "unit": "cup"},
+      {"name": "mixed vegetables (carrot, beans, peas, brinjal)", "quantity": 1.5, "unit": "cup"},
+      {"name": "tamarind", "quantity": 1, "unit": "tbsp"},
+      {"name": "bisi bele bath powder", "quantity": 3, "unit": "tbsp"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "oil", "quantity": 3, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "dried red chilli", "quantity": 2, "unit": "piece"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "salt", "quantity": 1.5, "unit": "tsp"},
+      {"name": "water", "quantity": 5, "unit": "cup"}
+    ],
+    "steps": [
+      "Wash the rice and dal together. Pressure cook with turmeric and 3 cups of water for 4-5 whistles until very soft and mushy.",
+      "Soak the tamarind in warm water for 10 minutes and extract the pulp.",
+      "In a pot boil the vegetables with 2 cups of water and salt for 10 minutes.",
+      "Add the tamarind pulp and bisi bele bath powder. Boil for 5 minutes until the raw smell goes.",
+      "Add the cooked rice and dal, mix well and simmer for 8-10 minutes. Add hot water for a loose, porridge-like consistency.",
+      "Heat oil, add mustard seeds, dried chillies, curry leaves and asafoetida. Pour over the dish and serve hot."
+    ],
+    "tips": ["The dish thickens as it cools. Keep hot water ready to loosen it.", "Serve with boondi or papad for crunch."],
+    "substitutions": ["No bisi bele bath powder? Use 2 tbsp sambar powder with 0.5 tsp garam masala."]
+  },
+  {
+    "id": "mixed-veg-sabzi", "region": "North Indian", "name": "Mixed Vegetable Sabzi",
+    "description": "A simple everyday dry vegetable curry with onion, tomato and basic spices.",
+    "cuisine": "Indian", "flavor_profile": ["savory", "mildly spicy", "comforting"],
+    "prep_time_min": 15, "cook_time_min": 25, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "carrot", "quantity": 1, "unit": "piece"},
+      {"name": "french beans", "quantity": 1, "unit": "cup"},
+      {"name": "green peas", "quantity": 0.5, "unit": "cup"},
+      {"name": "potato", "quantity": 1, "unit": "piece"},
+      {"name": "onion", "quantity": 1, "unit": "piece"},
+      {"name": "tomato", "quantity": 1, "unit": "piece"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "coriander powder", "quantity": 1, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "garam masala", "quantity": 0.5, "unit": "tsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Chop the carrot, beans and potato into small, even pieces.",
+      "Heat oil, add cumin seeds, then chopped onion. Cook for 4-5 minutes until golden.",
+      "Add chopped tomato, turmeric, coriander powder, chilli powder and salt. Cook for 4 minutes until soft.",
+      "Add all the vegetables and a splash of water. Mix well, cover and cook on low for 12-15 minutes, stirring now and then.",
+      "Sprinkle garam masala, mix and serve with roti."
+    ],
+    "tips": ["Cut the vegetables the same size so they cook evenly.", "Add the peas in the last 8 minutes to keep them bright."],
+    "substitutions": ["Use any seasonal vegetables such as cabbage, capsicum or cauliflower."]
+  },
+  {
+    "id": "curd-rice", "region": "South Indian", "name": "Curd Rice",
+    "description": "Cool, creamy rice mixed with yogurt and finished with a mustard seed tempering.",
+    "cuisine": "Indian", "flavor_profile": ["creamy", "light", "mild"],
+    "prep_time_min": 10, "cook_time_min": 5, "difficulty": "easy", "servings": 2,
+    "ingredients": [
+      {"name": "cooked rice", "quantity": 2, "unit": "cup"},
+      {"name": "yogurt (curd)", "quantity": 1, "unit": "cup"},
+      {"name": "milk", "quantity": 0.25, "unit": "cup"},
+      {"name": "oil", "quantity": 1, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 0.5, "unit": "tsp"},
+      {"name": "green chilli", "quantity": 1, "unit": "piece"},
+      {"name": "ginger", "quantity": 0.5, "unit": "inch"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"},
+      {"name": "coriander leaves", "quantity": 1, "unit": "tbsp"}
+    ],
+    "steps": [
+      "Mash the warm rice lightly with the back of a spoon so it turns soft and creamy. Let it cool.",
+      "Mix in the yogurt, milk and salt until smooth.",
+      "Heat oil, add mustard seeds, and when they pop add chopped chilli, grated ginger, curry leaves and asafoetida.",
+      "Pour the tempering over the rice and mix. Garnish with coriander leaves.",
+      "Chill for 15 minutes if you like it cold."
+    ],
+    "tips": ["Mix the yogurt in after the rice has cooled, or it turns sour fast.", "Add a little milk before serving if it thickens in the fridge."],
+    "substitutions": ["Add grated carrot or pomegranate seeds for sweetness and crunch."]
+  },
+  {
+    "id": "sabudana-khichdi", "region": "Maharashtrian", "name": "Sabudana Khichdi",
+    "description": "Soft sago pearls stir-fried with potato, peanuts and green chilli, a fasting-day favourite.",
+    "cuisine": "Indian", "flavor_profile": ["crunchy", "mildly spicy", "light"],
+    "prep_time_min": 480, "cook_time_min": 15, "difficulty": "medium", "servings": 2,
+    "ingredients": [
+      {"name": "sabudana (sago pearls)", "quantity": 1, "unit": "cup"},
+      {"name": "potato", "quantity": 1, "unit": "piece"},
+      {"name": "peanuts", "quantity": 0.25, "unit": "cup"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "sugar", "quantity": 0.5, "unit": "tsp"},
+      {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"}
+    ],
+    "steps": [
+      "Rinse the sabudana until the water runs clear. Soak it in just enough water to cover for 6-8 hours, until the pearls squash easily between your fingers. Drain fully.",
+      "Dry roast the peanuts until crisp, cool and coarsely crush them. Mix with the sabudana, salt and sugar.",
+      "Boil, peel and cube the potato.",
+      "Heat oil, add cumin seeds and chopped green chillies. Add the potato and fry for 3-4 minutes until golden.",
+      "Add the sabudana mixture and stir gently on medium-low heat for 4-5 minutes until the pearls turn translucent.",
+      "Finish with lemon juice and coriander leaves."
+    ],
+    "tips": ["Do not over-soak or add too much water. The pearls should stay separate, not sticky.", "Stir gently so the pearls do not break."],
+    "substitutions": ["Use rock salt if you are fasting."]
+  }
+]

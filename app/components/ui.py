@@ -11,6 +11,11 @@ RECIPE_EMOJI = {
     "bhindi-masala": "🌿", "jeera-rice": "🍚", "sambar": "🍜",
     "lemon-rice": "🍋", "poha": "🍛", "upma": "🥣", "gujarati-kadhi": "🥛",
     "baingan-bharta": "🍆", "paneer-bhurji": "🧀", "moong-dal-khichdi": "🫕",
+        "dosa": "🥞", "podi-idli": "⚪", "pav-bhaji": "🍞", "veg-pulao": "🍚",
+    "dhokla": "🟨", "matar-paneer": "🧈", "kadai-paneer": "🌶️",
+    "aloo-paratha": "🫓", "veg-biryani": "🍛", "masoor-dal": "🥣",
+    "methi-thepla": "🍃", "veg-korma": "🥥", "bisi-bele-bath": "🍲",
+    "mixed-veg-sabzi": "🥕", "curd-rice": "🍙", "sabudana-khichdi": "🥜",
 }
 
 REGION_GRADIENT = {

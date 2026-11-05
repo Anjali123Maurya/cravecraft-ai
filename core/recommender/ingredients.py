@@ -29,6 +29,11 @@ ALIASES: dict[str, str] = {
     "lal mirch": "red chilli powder", "red chili powder": "red chilli powder",
     "moongfali": "peanuts", "peanut": "peanuts", "groundnut": "peanuts",
     "mungfali": "peanuts", "yellow moong dal": "moong dal",
+        "atta": "wheat flour", "wheat flour atta": "wheat flour",
+    "whole wheat flour": "wheat flour", "sabudana": "sago",
+    "sabudana sago pearls": "sago", "tapioca pearls": "sago",
+    "masoor dal red lentils": "masoor dal", "red lentils": "masoor dal",
+    "bean": "french beans", "green beans": "french beans",
 }
 
 # Assumed to be in every kitchen: not counted as "missing" and not scored.
@@ -38,6 +43,9 @@ STAPLES = {
     "asafoetida", "black pepper", "bay leaf", "cloves", "cinnamon stick",
     "curry leaves", "dried red chilli", "amchur powder", "chana masala powder",
     "sambar powder", "ginger garlic paste",
+        "pav bhaji masala", "kasuri methi", "biryani masala", "chaat masala",
+    "bisi bele bath powder", "idli podi", "ajwain", "coriander seeds",
+    "cardamom", "mint leaves", "fruit salt eno",
 }
 
 _PAREN = re.compile(r"\(.*?\)")
