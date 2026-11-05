@@ -129,7 +129,7 @@ def check_recipe(recipe: Recipe, profile: SafetyProfile) -> list[Violation]:
     text = " . ".join(_strings(recipe.model_dump()))
     violations = check_text(text, profile)
     if violations:
-        logger.warning("Recipe '%s' blocked: %s", recipe.name, violations)
+        logger.debug("Recipe '%s' blocked: %s", recipe.name, violations)
     return violations
 
 
