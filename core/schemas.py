@@ -43,3 +43,8 @@ class Adaptation(BaseModel):
     description: str = Field(min_length=10, max_length=300)
     tips: list[str] = Field(default_factory=list, max_length=4)
     substitutions: list[str] = Field(default_factory=list, max_length=4)
+
+
+class Answer(BaseModel):
+    """A short answer to a cooking question."""
+    answer: str = Field(min_length=5, max_length=600)

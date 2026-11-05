@@ -157,11 +157,20 @@ recipe = result.recipe
 st.markdown(ui.banner(recipe, result.used_llm), unsafe_allow_html=True)
 
 store = get_store()
-if store.is_favorite(recipe.id):
-    st.success("❤️ Saved in your favorites. Rate it on the Favorites page.")
-elif st.button("🤍 Save to favorites", key=f"fav_{recipe.id}", type="primary"):
-    store.save_favorite(recipe.id, recipe.name)
-    st.rerun()
+fav_col, cook_col, _ = st.columns([1, 1, 2])
+with fav_col:
+    if store.is_favorite(recipe.id):
+        st.success("❤️ Saved")
+    elif st.button("🤍 Save to favorites", key=f"fav_{recipe.id}",
+                   use_container_width=True):
+        store.save_favorite(recipe.id, recipe.name)
+        st.rerun()
+with cook_col:
+    if st.button("👩‍🍳 Start cooking", key=f"cook_{recipe.id}", type="primary",
+                 use_container_width=True):
+        st.session_state["cooking_recipe"] = recipe
+        st.session_state.pop("cooking_id", None)
+        st.switch_page("pages/3_Cooking.py")
 
 if use_ai:
     for warning in result.warnings:
