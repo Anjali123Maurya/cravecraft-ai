@@ -9,12 +9,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 import streamlit as st  # noqa: E402
 
 from app.components import ui  # noqa: E402
-from core.ai.llm_client import LLMClient, LLMUnavailable  # noqa: E402
+from core.ai.llm_client import LLMClient, LLMUnavailable, ollama_available
 from core.safety.filter import SafetyProfile  # noqa: E402
 from core.services.cooking import (answer_question, step_ingredients,  # noqa: E402
                                    step_timers)
-from db.session import get_store  # noqa: E402
-
+from app.components.store import get_store
 SOURCE_LABEL = {"tips": "💡 Quick kitchen tip", "ai": "✨ Local AI (can be wrong)",
                 "none": ""}
 
@@ -47,9 +46,11 @@ if recipe is None:
 profile = st.session_state.get("profile") or SafetyProfile()
 
 with st.sidebar:
-    use_ai = st.checkbox("✨ Use the local AI for questions", value=True,
-                         help="Needs Ollama running. Common kitchen problems are "
-                              "answered without it.")
+    _ai = ollama_available()
+    use_ai = st.checkbox("✨ Use the local AI for questions", value=_ai,
+                         disabled=not _ai,
+                         help="Needs Ollama on this computer. Common kitchen "
+                              "problems are answered without it.")
 
 
 def reset() -> None:

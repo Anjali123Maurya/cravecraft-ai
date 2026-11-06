@@ -82,3 +82,18 @@ def test_use_first_bonus_in_ranker():
     base = Preferences(pantry=["potatoes", "peas", "onion", "tomato"])
     urgent = Preferences(pantry=base.pantry, use_first=["peas"])
     assert score_recipe(recipe, urgent).score == score_recipe(recipe, base).score + 10
+
+def test_in_memory_store_works_across_threads():
+    import threading
+    store = make_store("sqlite://")
+    store.add_pantry_item("tomato")
+    seen = []
+    t = threading.Thread(target=lambda: seen.append(len(store.list_pantry())))
+    t.start(); t.join()
+    assert seen == [1]
+
+
+def test_ollama_unavailable_returns_false():
+    from types import SimpleNamespace
+    from core.ai.llm_client import ollama_available
+    assert ollama_available(SimpleNamespace(ollama_host="http://127.0.0.1:9")) is False

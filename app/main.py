@@ -13,7 +13,10 @@ import streamlit as st  # noqa: E402
 
 from app.components import ui  # noqa: E402
 from core.ai.adapter import adapt_recipe  # noqa: E402
-from core.ai.llm_client import LLMClient, LLMUnavailable  # noqa: E402
+import importlib.util  # noqa: E402
+
+from core.ai.llm_client import (LLMClient, LLMUnavailable,  # noqa: E402
+                                ollama_available)
 from core.config import get_settings  # noqa: E402
 from core.knowledge.loader import load_seed_recipes  # noqa: E402
 from core.recommender.ranker import Preferences, rank_recipes  # noqa: E402
@@ -21,7 +24,7 @@ from core.safety.allergens import ALLERGEN_LABELS  # noqa: E402
 from core.safety.diet_rules import DIETS  # noqa: E402
 from core.safety.filter import (SafetyProfile, filter_ingredients,  # noqa: E402
                                 safe_recipes)
-from db.session import get_store  # noqa: E402
+from app.components.store import get_store
 from core.services.nutrition import estimate_nutrition  # noqa: E402
 from core.services.remix import REMIXES, remix  # noqa: E402
 from PIL import Image  # noqa: E402
@@ -53,6 +56,19 @@ def parse_list(text: str) -> list[str]:
 st.set_page_config(page_title="CraveCraft AI", page_icon="🍛", layout="wide")
 st.markdown(ui.CSS, unsafe_allow_html=True)
 settings = get_settings()
+HAS_VISION = (importlib.util.find_spec("torch") is not None
+              and importlib.util.find_spec("transformers") is not None)
+
+
+@st.cache_data(ttl=30)
+def ai_ready() -> bool:
+    return ollama_available()
+
+
+if settings.demo_mode:
+    st.info("🌐 Demo mode: your pantry and favorites live only in this browser "
+            "tab and disappear when you close it. The local AI and photo scan "
+            "run only on a laptop; recipes are shown as written here.")
 
 # ---------------- Sidebar: food rules ----------------
 with st.sidebar:
@@ -67,8 +83,11 @@ with st.sidebar:
     st.caption("Extra items are matched by name only. Always check packaged "
                "food labels yourself.")
     st.divider()
-    use_ai = st.checkbox("✨ Use the local AI to tailor the text", value=True,
-                         help="Needs Ollama running. Turn off to see the plain recipe.")
+    use_ai = st.checkbox("✨ Use the local AI to tailor the text",
+                         value=ai_ready(), disabled=not ai_ready(),
+                         help="Needs Ollama running on this computer.")
+    if not ai_ready():
+        st.caption("Local AI not detected, so recipes are shown as written.")
 
 # ---------------- Header and inputs ----------------
 st.markdown(ui.hero(), unsafe_allow_html=True)
@@ -79,8 +98,11 @@ pantry_text = st.text_area("Ingredients", height=90, label_visibility="collapsed
 
 scanned: list[str] = []
 with st.expander("📷 Scan ingredients from a photo (optional)"):
+    if not HAS_VISION:
+        st.info("Photo scan needs the optional vision packages, so it is "
+                "switched off here. Type or tap your ingredients instead.")
     photo = st.file_uploader("Upload a photo of your ingredients",
-                             type=["jpg", "jpeg", "png"])
+                             type=["jpg", "jpeg", "png"], disabled=not HAS_VISION)
     if photo is not None:
         st.image(photo, width=260)
         if st.button("🔍 Detect ingredients"):

@@ -8,7 +8,7 @@ import streamlit as st  # noqa: E402
 
 from app.components import ui  # noqa: E402
 from core.knowledge.loader import load_seed_recipes  # noqa: E402
-from db.session import get_store  # noqa: E402
+from app.components.store import get_store
 
 st.set_page_config(page_title="Favorites · CraveCraft AI", page_icon="❤️", layout="wide")
 st.markdown(ui.CSS, unsafe_allow_html=True)

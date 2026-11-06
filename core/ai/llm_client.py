@@ -44,3 +44,12 @@ class LLMClient:
             logger.error("Ollama call failed: %s", exc)
             raise LLMUnavailable(f"{type(exc).__name__}: {exc}") from exc
         return response.message.content or ""
+    
+def ollama_available(settings: Settings | None = None) -> bool:
+    """True if the local Ollama server answers quickly."""
+    settings = settings or get_settings()
+    try:
+        ollama.Client(host=settings.ollama_host, timeout=2).list()
+        return True
+    except Exception:
+        return False

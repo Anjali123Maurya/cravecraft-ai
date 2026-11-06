@@ -15,7 +15,7 @@ from core.safety.filter import (SafetyProfile, filter_ingredients,  # noqa: E402
                                 safe_recipes)
 from core.services.nutrition import estimate_nutrition  # noqa: E402
 from core.services.planner import DAY_NAMES, grocery_list, plan_week  # noqa: E402
-from db.session import get_store  # noqa: E402
+from app.components.store import get_store
 
 DIET_CHOICES = [d for d in DIETS if d != "non_vegetarian"]
 

@@ -8,8 +8,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 import streamlit as st  # noqa: E402
 
 from app.components import ui  # noqa: E402
+
 from db.repositories import expiry_status  # noqa: E402
-from db.session import get_store  # noqa: E402
+from app.components.store import get_store
 
 UNITS = ["", "piece", "g", "kg", "ml", "l", "cup", "tbsp", "tsp", "packet"]
 BADGE = {"expired": "🔴 Expired", "soon": "🟠 Use soon",

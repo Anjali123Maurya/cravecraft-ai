@@ -38,7 +38,8 @@ class Settings:
     log_level: str
     default_diet: str
     unit_system: str  # "household" (cups + grams) or "metric"
-
+    demo_mode: bool = False
+    
 
 @lru_cache
 def get_settings() -> Settings:
@@ -52,4 +53,6 @@ def get_settings() -> Settings:
         log_level=os.getenv("LOG_LEVEL", "INFO"),
         default_diet=os.getenv("DEFAULT_DIET", "vegetarian"),
         unit_system=os.getenv("UNIT_SYSTEM", "household"),
+        demo_mode=os.getenv("DEMO_MODE", "").lower() in ("1", "true", "yes"),
     )
+    
