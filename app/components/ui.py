@@ -16,6 +16,14 @@ RECIPE_EMOJI = {
     "aloo-paratha": "🫓", "veg-biryani": "🍛", "masoor-dal": "🥣",
     "methi-thepla": "🍃", "veg-korma": "🥥", "bisi-bele-bath": "🍲",
     "mixed-veg-sabzi": "🥕", "curd-rice": "🍙", "sabudana-khichdi": "🥜",
+         "jain-dal-tadka": "🍲", "dum-aloo-free-lauki": "🥒",
+    "jain-cabbage-sabzi": "🥬", "tindora-sabzi": "🥒",
+    "vegan-coconut-dal": "🥥", "kerala-veg-stew": "🍲",
+    "tomato-rasam": "🍅", "jain-besan-chilla": "🥞",
+    "vegan-chana-sundal": "🫘", "jain-sev-tamatar": "🍅",
+    "mushroom-free-matar-pulao": "🍚", "peanut-free-ragi-dosa": "🥞",
+    "vegan-tomato-chutney-rice": "🍅", "vegan-peas-pulao-free-khichdi": "🍚",
+    "jain-sooji-uttapam": "🥞",
 }
 
 REGION_GRADIENT = {

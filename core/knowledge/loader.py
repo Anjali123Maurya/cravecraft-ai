@@ -9,8 +9,7 @@ from pathlib import Path
 
 from core.schemas import Recipe
 
-SEED_FILES = ("recipes_seed.json", "recipes_more.json")
-
+SEED_FILES = ("recipes_seed.json", "recipes_more.json", "recipes_extra.json")
 
 class SeedRecipe(Recipe):
     id: str

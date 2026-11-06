@@ -28,7 +28,7 @@ def test_every_recipe_is_vegetarian():
     for recipe in load_seed_recipes():
         assert check_recipe(recipe, profile) == [], recipe.id
         
-def test_second_file_loaded_and_total_is_32():
+def test_all_files_loaded_and_total_is_48():
     ids = {r.id for r in load_seed_recipes()}
-    assert len(ids) == 32
-    assert {"dosa", "pav-bhaji", "veg-biryani", "sabudana-khichdi"} <= ids
+    assert len(ids) == 47
+    assert {"dosa", "pav-bhaji", "veg-biryani", "tomato-rasam"} <= ids

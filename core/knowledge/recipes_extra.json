@@ -1,0 +1,426 @@
+[
+  {
+    "id": "jain-dal-tadka", "region": "North Indian", "name": "Jain Dal Tadka",
+    "description": "Smooth yellow lentils tempered with cumin, asafoetida and tomato, made without onion or garlic.",
+    "cuisine": "Indian", "flavor_profile": ["savory", "comforting", "mildly spicy"],
+    "prep_time_min": 10, "cook_time_min": 30, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "moong dal", "quantity": 0.75, "unit": "cup"},
+      {"name": "water", "quantity": 3, "unit": "cup"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "tomato", "quantity": 2, "unit": "piece"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "green chilli", "quantity": 1, "unit": "piece"},
+      {"name": "red chilli powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Wash the dal and boil it with water, turmeric and salt for 20-25 minutes until soft. Whisk lightly.",
+      "Heat oil in a pan. Add cumin seeds and let them sizzle for 10 seconds.",
+      "Add asafoetida and slit green chilli, then the chopped tomatoes and chilli powder.",
+      "Cook for 4-5 minutes until the tomatoes turn soft and mushy.",
+      "Pour the tempering into the dal, simmer for 3 minutes and garnish with coriander leaves."
+    ],
+    "tips": ["Asafoetida gives the savory depth that onion and garlic normally provide.", "Add hot water if the dal thickens."],
+    "substitutions": ["Use masoor dal for a faster cook of about 15 minutes."]
+  },
+  {
+    "id": "dum-aloo-free-lauki", "region": "North Indian", "name": "Lauki Sabzi",
+    "description": "Tender bottle gourd cooked simply with tomato, cumin and a hint of lemon.",
+    "cuisine": "Indian", "flavor_profile": ["light", "mild", "comforting"],
+    "prep_time_min": 10, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "bottle gourd (lauki)", "quantity": 400, "unit": "g"},
+      {"name": "tomato", "quantity": 2, "unit": "piece"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "green chilli", "quantity": 1, "unit": "piece"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "coriander powder", "quantity": 1, "unit": "tsp"},
+      {"name": "garam masala", "quantity": 0.25, "unit": "tsp"},
+      {"name": "lemon juice", "quantity": 1, "unit": "tsp"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"}
+    ],
+    "steps": [
+      "Peel the bottle gourd and cut it into 2 cm cubes.",
+      "Heat oil, add cumin seeds, asafoetida and chopped green chilli.",
+      "Add the tomatoes, turmeric, coriander powder and salt. Cook for 4 minutes until soft.",
+      "Add the bottle gourd and mix well. Cover and cook on low for 12-15 minutes, stirring now and then. It releases its own water, so add none.",
+      "Finish with garam masala and lemon juice."
+    ],
+    "tips": ["Do not add water. The gourd cooks in its own moisture.", "Choose a young, firm gourd. Older ones turn bitter."],
+    "substitutions": ["Use ridge gourd or zucchini in place of bottle gourd."]
+  },
+  {
+    "id": "jain-cabbage-sabzi", "region": "Gujarati", "name": "Cabbage Sabzi",
+    "description": "A quick dry stir-fry of cabbage and peas with mustard seeds and turmeric.",
+    "cuisine": "Indian", "flavor_profile": ["savory", "light", "mildly spicy"],
+    "prep_time_min": 10, "cook_time_min": 15, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "cabbage", "quantity": 400, "unit": "g"},
+      {"name": "green peas", "quantity": 0.5, "unit": "cup"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "cumin seeds", "quantity": 0.5, "unit": "tsp"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "sugar", "quantity": 0.5, "unit": "tsp"},
+      {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"}
+    ],
+    "steps": [
+      "Shred the cabbage finely.",
+      "Heat oil, add mustard seeds and wait for them to pop. Add cumin seeds, asafoetida and slit green chillies.",
+      "Add the peas, turmeric and salt and stir for 2 minutes.",
+      "Add the cabbage and sugar. Toss on medium-high heat for 6-8 minutes, uncovered, until tender but still slightly crunchy.",
+      "Finish with lemon juice and coriander leaves."
+    ],
+    "tips": ["Keep the pan uncovered so the cabbage roasts and does not turn watery.", "Do not overcook. It should keep a little bite."],
+    "substitutions": ["Add a handful of roasted peanuts for crunch, unless you avoid peanuts."]
+  },
+  {
+    "id": "tindora-sabzi", "region": "Gujarati", "name": "Tindora Sabzi",
+    "description": "Ivy gourd stir-fried with mustard, turmeric and a touch of jaggery.",
+    "cuisine": "Indian", "flavor_profile": ["savory", "mildly spicy", "tangy"],
+    "prep_time_min": 10, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "tindora (ivy gourd)", "quantity": 300, "unit": "g"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "cumin seeds", "quantity": 0.5, "unit": "tsp"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "coriander powder", "quantity": 1, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "sugar", "quantity": 0.5, "unit": "tsp"},
+      {"name": "lemon juice", "quantity": 1, "unit": "tsp"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"}
+    ],
+    "steps": [
+      "Wash the tindora, trim the ends and slice lengthwise into thin strips.",
+      "Heat oil, add mustard seeds and let them pop. Add cumin seeds and asafoetida.",
+      "Add the tindora, turmeric and salt. Mix well.",
+      "Cover and cook on low for 10-12 minutes, stirring now and then, until tender.",
+      "Add coriander powder, chilli powder and sugar. Cook uncovered for 3-4 minutes until slightly crisp. Finish with lemon juice."
+    ],
+    "tips": ["Thin slices cook evenly and get crisp edges.", "Add the spice powders at the end so they do not burn."],
+    "substitutions": ["Use okra or ridge gourd if tindora is not available."]
+  },
+  {
+    "id": "vegan-coconut-dal", "region": "South Indian", "name": "Coconut Moong Dal",
+    "description": "Creamy yellow lentils simmered with coconut and finished with a mustard and curry leaf tempering.",
+    "cuisine": "Indian", "flavor_profile": ["creamy", "mild", "comforting"],
+    "prep_time_min": 10, "cook_time_min": 25, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "moong dal", "quantity": 0.75, "unit": "cup"},
+      {"name": "water", "quantity": 3, "unit": "cup"},
+      {"name": "grated coconut", "quantity": 0.25, "unit": "cup"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "oil", "quantity": 1.5, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "dried red chilli", "quantity": 2, "unit": "piece"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Wash the dal and boil it with water and turmeric for 20 minutes until completely soft.",
+      "Grind the coconut and green chillies with a little water into a paste.",
+      "Add the paste and salt to the dal. Simmer for 5 minutes, adding hot water if too thick.",
+      "Heat oil, add mustard seeds, and when they pop add dried chillies, curry leaves and asafoetida.",
+      "Pour the tempering over the dal and serve with rice."
+    ],
+    "tips": ["Do not boil hard after adding the coconut paste.", "Serve with rice and a dry vegetable for a full meal."],
+    "substitutions": ["Use 3 tbsp of desiccated coconut soaked in warm water if fresh coconut is unavailable."]
+  },
+  {
+    "id": "kerala-veg-stew", "region": "South Indian", "name": "Vegetable Stew",
+    "description": "Mild Kerala-style stew of mixed vegetables in thin coconut milk with whole spices.",
+    "cuisine": "Indian", "flavor_profile": ["creamy", "mild", "comforting"],
+    "prep_time_min": 15, "cook_time_min": 25, "difficulty": "easy", "servings": 4,
+    "ingredients": [
+      {"name": "mixed vegetables (carrot, beans, peas, cauliflower)", "quantity": 3, "unit": "cup"},
+      {"name": "coconut milk", "quantity": 1, "unit": "cup"},
+      {"name": "water", "quantity": 1, "unit": "cup"},
+      {"name": "onion", "quantity": 1, "unit": "piece"},
+      {"name": "ginger", "quantity": 1, "unit": "inch"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "cardamom", "quantity": 2, "unit": "piece"},
+      {"name": "cloves", "quantity": 3, "unit": "piece"},
+      {"name": "cinnamon stick", "quantity": 1, "unit": "inch"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "black pepper", "quantity": 0.5, "unit": "tsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Heat oil and add cardamom, cloves and cinnamon. Let them sizzle for 20 seconds.",
+      "Add sliced onion, ginger, green chillies and curry leaves. Cook for 3-4 minutes without browning.",
+      "Add the vegetables, water and salt. Cover and cook for 12-15 minutes until tender.",
+      "Pour in the coconut milk and black pepper. Simmer gently for 5 minutes. Do not boil hard.",
+      "Serve with appam, idli or rice."
+    ],
+    "tips": ["Keep the onion pale. The stew should be white and mild.", "Boiling coconut milk hard can make it split."],
+    "substitutions": ["Add cubed potato for a heartier stew, unless you avoid potatoes."]
+  },
+  {
+    "id": "tomato-rasam", "region": "South Indian", "name": "Tomato Rasam",
+    "description": "A thin, peppery, tangy South Indian soup of tomato, tamarind and spices.",
+    "cuisine": "Indian", "flavor_profile": ["tangy", "spicy", "light"],
+    "prep_time_min": 10, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "tomato", "quantity": 3, "unit": "piece"},
+      {"name": "tamarind", "quantity": 1, "unit": "tbsp"},
+      {"name": "toor dal", "quantity": 2, "unit": "tbsp"},
+      {"name": "water", "quantity": 3, "unit": "cup"},
+      {"name": "black pepper", "quantity": 1, "unit": "tsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "turmeric powder", "quantity": 0.25, "unit": "tsp"},
+      {"name": "oil", "quantity": 1, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "dried red chilli", "quantity": 2, "unit": "piece"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Pressure cook the dal with turmeric and 1 cup of water until very soft. Mash it.",
+      "Soak the tamarind in warm water for 10 minutes and extract the pulp.",
+      "Crush the pepper and half the cumin coarsely.",
+      "Boil the chopped tomatoes with the tamarind pulp, 2 cups of water, salt and the crushed spices for 8-10 minutes until the raw smell goes.",
+      "Add the mashed dal and simmer for 3 minutes. Do not boil hard.",
+      "Heat oil, add mustard seeds, dried chillies, curry leaves, asafoetida and the remaining cumin. Pour over the rasam and add coriander leaves."
+    ],
+    "tips": ["Rasam should be thin and fragrant, so do not thicken it.", "Serve hot with rice or sip it as a soup."],
+    "substitutions": ["Use 1 tbsp lemon juice instead of tamarind, added at the end."]
+  },
+  {
+    "id": "jain-besan-chilla", "region": "North Indian", "name": "Besan Chilla",
+    "description": "Savory gram flour pancakes with tomato and coriander, a quick high-protein breakfast.",
+    "cuisine": "Indian", "flavor_profile": ["savory", "crunchy", "mildly spicy"],
+    "prep_time_min": 10, "cook_time_min": 15, "difficulty": "easy", "servings": 2,
+    "ingredients": [
+      {"name": "besan (gram flour)", "quantity": 1, "unit": "cup"},
+      {"name": "water", "quantity": 0.75, "unit": "cup"},
+      {"name": "tomato", "quantity": 1, "unit": "piece"},
+      {"name": "green chilli", "quantity": 1, "unit": "piece"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "turmeric powder", "quantity": 0.25, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "ajwain", "quantity": 0.5, "unit": "tsp"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"}
+    ],
+    "steps": [
+      "Whisk the besan, water, turmeric, chilli powder, ajwain and salt into a smooth, pourable batter with no lumps.",
+      "Stir in finely chopped tomato, green chilli and coriander leaves.",
+      "Heat a non-stick pan on medium and grease lightly. Pour a ladle of batter and spread it into a round.",
+      "Cook for 2-3 minutes until the edges lift and the underside is golden. Drizzle a little oil around the edge.",
+      "Flip and cook for 1-2 minutes more. Serve hot."
+    ],
+    "tips": ["Rest the batter for 10 minutes for softer chillas.", "Spread thin for crisp edges, thicker for soft ones."],
+    "substitutions": ["Add grated cabbage or spinach to the batter for extra vegetables."]
+  },
+  {
+    "id": "vegan-chana-sundal", "region": "South Indian", "name": "Chana Sundal",
+    "description": "A light, protein-rich chickpea salad tempered with mustard seeds, curry leaves and coconut.",
+    "cuisine": "Indian", "flavor_profile": ["savory", "light", "crunchy"],
+    "prep_time_min": 10, "cook_time_min": 10, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "chickpeas", "quantity": 1, "unit": "cup"},
+      {"name": "grated coconut", "quantity": 0.25, "unit": "cup"},
+      {"name": "oil", "quantity": 1.5, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "dried red chilli", "quantity": 2, "unit": "piece"},
+      {"name": "green chilli", "quantity": 1, "unit": "piece"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "lemon juice", "quantity": 1, "unit": "tbsp"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"}
+    ],
+    "steps": [
+      "Soak the chickpeas overnight. Pressure cook with salt for 6-7 whistles until soft but whole. Drain well.",
+      "Heat oil, add mustard seeds, and when they pop add dried chillies, green chilli, curry leaves and asafoetida.",
+      "Add the chickpeas and toss for 2-3 minutes.",
+      "Turn off the heat, add the grated coconut and lemon juice, and mix."
+    ],
+    "tips": ["Drain the chickpeas completely so the sundal stays dry.", "Serve warm as a snack."],
+    "substitutions": ["Use two cans of chickpeas, drained and rinsed, to skip the soaking."]
+  },
+  {
+    "id": "jain-sev-tamatar", "region": "Gujarati", "name": "Sev Tamatar",
+    "description": "A tangy, lightly sweet tomato curry topped with crunchy sev, a Gujarati favourite.",
+    "cuisine": "Indian", "flavor_profile": ["tangy", "spicy", "crunchy"],
+    "prep_time_min": 10, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "tomato", "quantity": 5, "unit": "piece"},
+      {"name": "sev (gram flour noodles)", "quantity": 1, "unit": "cup"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 1, "unit": "tsp"},
+      {"name": "coriander powder", "quantity": 1, "unit": "tsp"},
+      {"name": "sugar", "quantity": 1, "unit": "tsp"},
+      {"name": "water", "quantity": 1, "unit": "cup"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Chop the tomatoes finely.",
+      "Heat oil, add mustard seeds and cumin seeds. When they pop add asafoetida and slit green chillies.",
+      "Add the tomatoes, turmeric, chilli powder, coriander powder, sugar and salt. Cook for 8-10 minutes until the tomatoes break down and the oil separates.",
+      "Add the water and simmer for 5 minutes to make a thin gravy.",
+      "Pour into a bowl, top with sev and coriander leaves, and serve immediately."
+    ],
+    "tips": ["Add the sev just before eating so it stays crisp.", "A little sugar balances the sourness of the tomatoes."],
+    "substitutions": ["Use crushed papdi or plain boondi if you have no sev."]
+  },
+  {
+    "id": "mushroom-free-matar-pulao", "region": "North Indian", "name": "Matar Pulao",
+    "description": "Light basmati rice cooked with green peas and whole spices.",
+    "cuisine": "Indian", "flavor_profile": ["mild", "aromatic", "comforting"],
+    "prep_time_min": 25, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "basmati rice", "quantity": 1, "unit": "cup"},
+      {"name": "green peas", "quantity": 0.75, "unit": "cup"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "bay leaf", "quantity": 1, "unit": "piece"},
+      {"name": "cloves", "quantity": 3, "unit": "piece"},
+      {"name": "cinnamon stick", "quantity": 1, "unit": "inch"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "water", "quantity": 1.75, "unit": "cup"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Wash the rice until the water runs clear and soak for 20 minutes. Drain.",
+      "Heat oil, add cumin seeds, bay leaf, cloves and cinnamon. Let them sizzle for 20 seconds.",
+      "Add slit green chillies and the peas and stir for 1 minute.",
+      "Add the rice and fry gently for 1 minute. Add water and salt and bring to a boil.",
+      "Cover tightly, reduce to the lowest heat and cook for 12-15 minutes. Rest 5 minutes and fluff with a fork."
+    ],
+    "tips": ["Do not stir once the lid is on.", "Frozen peas can go in directly."],
+    "substitutions": ["Add cauliflower florets or beans for a mixed vegetable version."]
+  },
+  {
+    "id": "peanut-free-ragi-dosa", "region": "South Indian", "name": "Ragi Dosa",
+    "description": "Quick, crisp finger-millet crepes that need no fermentation, with a simple tempering.",
+    "cuisine": "Indian", "flavor_profile": ["savory", "crunchy", "light"],
+    "prep_time_min": 15, "cook_time_min": 20, "difficulty": "medium", "servings": 3,
+    "ingredients": [
+      {"name": "ragi flour (finger millet)", "quantity": 1, "unit": "cup"},
+      {"name": "rice flour", "quantity": 0.5, "unit": "cup"},
+      {"name": "water", "quantity": 2.5, "unit": "cup"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "oil", "quantity": 3, "unit": "tbsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Mix the ragi flour, rice flour, chopped chillies, cumin, curry leaves, coriander leaves and salt in a bowl.",
+      "Add the water and whisk into a thin, runny batter, thinner than regular dosa batter. Rest for 10 minutes.",
+      "Heat a flat pan on medium-high and grease it lightly.",
+      "Stir the batter, then pour it from a height in a ring shape, starting from the outside and filling the centre.",
+      "Drizzle oil around the edges and cook for 2-3 minutes until crisp. Flip only if needed and serve hot."
+    ],
+    "tips": ["The batter must stay thin, so stir it before every dosa because the flour settles.", "The pan must be hot or the dosa sticks."],
+    "substitutions": ["Add finely chopped onion if you do not follow Jain rules."]
+  },
+  {
+    "id": "vegan-tomato-chutney-rice", "region": "South Indian", "name": "Tomato Rice",
+    "description": "Tangy, spiced rice cooked with tomato, mustard seeds and curry leaves.",
+    "cuisine": "Indian", "flavor_profile": ["tangy", "spicy", "savory"],
+    "prep_time_min": 10, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "cooked rice", "quantity": 3, "unit": "cup"},
+      {"name": "tomato", "quantity": 4, "unit": "piece"},
+      {"name": "oil", "quantity": 3, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "chana dal", "quantity": 1, "unit": "tbsp"},
+      {"name": "dried red chilli", "quantity": 2, "unit": "piece"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "red chilli powder", "quantity": 1, "unit": "tsp"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"}
+    ],
+    "steps": [
+      "Spread the cooked rice on a plate to cool so the grains separate.",
+      "Heat oil, add mustard seeds and chana dal. When the seeds pop and the dal turns golden, add dried chillies, curry leaves and asafoetida.",
+      "Add the chopped tomatoes, turmeric, chilli powder and salt. Cook for 8-10 minutes until the tomatoes turn into a thick, oily paste.",
+      "Add the rice and mix gently on low heat for 2-3 minutes so every grain is coated.",
+      "Garnish with coriander leaves."
+    ],
+    "tips": ["Cook the tomato until the oil separates. This gives the dish its depth.", "Day-old rice works best."],
+    "substitutions": ["Add a squeeze of lemon at the end if the tomatoes are not sour enough."]
+  },
+  {
+    "id": "vegan-peas-pulao-free-khichdi", "region": "Gujarati", "name": "Vagharelo Khichdi",
+    "description": "Soft rice and moong dal khichdi finished with a fragrant mustard and cumin tempering.",
+    "cuisine": "Indian", "flavor_profile": ["comforting", "mild", "savory"],
+    "prep_time_min": 10, "cook_time_min": 25, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "rice", "quantity": 0.5, "unit": "cup"},
+      {"name": "moong dal", "quantity": 0.5, "unit": "cup"},
+      {"name": "water", "quantity": 4, "unit": "cup"},
+      {"name": "turmeric powder", "quantity": 0.5, "unit": "tsp"},
+      {"name": "salt", "quantity": 1, "unit": "tsp"},
+      {"name": "oil", "quantity": 2, "unit": "tbsp"},
+      {"name": "mustard seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "cumin seeds", "quantity": 1, "unit": "tsp"},
+      {"name": "asafoetida", "quantity": 1, "unit": "pinch"},
+      {"name": "dried red chilli", "quantity": 1, "unit": "piece"},
+      {"name": "curry leaves", "quantity": 1, "unit": "sprig"},
+      {"name": "green chilli", "quantity": 1, "unit": "piece"}
+    ],
+    "steps": [
+      "Wash the rice and dal together and soak for 15 minutes. Drain.",
+      "Pressure cook with the water, turmeric and salt for 3-4 whistles until soft and mushy.",
+      "Let the pressure release naturally and mix well. Add hot water to adjust the consistency.",
+      "Heat oil, add mustard seeds and cumin seeds. When they pop add asafoetida, dried chilli, green chilli and curry leaves.",
+      "Pour the tempering over the khichdi and serve hot."
+    ],
+    "tips": ["Khichdi thickens as it cools. Add hot water when reheating.", "Serve with pickle or papad."],
+    "substitutions": ["Add peas or bottle gourd cubes for extra vegetables."]
+  },
+  {
+    "id": "jain-sooji-uttapam", "region": "South Indian", "name": "Rava Uttapam",
+    "description": "Soft, thick semolina pancakes topped with tomato, chilli and coriander.",
+    "cuisine": "Indian", "flavor_profile": ["savory", "light", "comforting"],
+    "prep_time_min": 25, "cook_time_min": 20, "difficulty": "easy", "servings": 3,
+    "ingredients": [
+      {"name": "rava (semolina)", "quantity": 1, "unit": "cup"},
+      {"name": "water", "quantity": 1.25, "unit": "cup"},
+      {"name": "tomato", "quantity": 1, "unit": "piece"},
+      {"name": "green chilli", "quantity": 2, "unit": "piece"},
+      {"name": "coriander leaves", "quantity": 2, "unit": "tbsp"},
+      {"name": "cumin seeds", "quantity": 0.5, "unit": "tsp"},
+      {"name": "black pepper", "quantity": 0.25, "unit": "tsp"},
+      {"name": "oil", "quantity": 3, "unit": "tbsp"},
+      {"name": "salt", "quantity": 0.75, "unit": "tsp"}
+    ],
+    "steps": [
+      "Mix the rava, water, cumin, pepper and salt into a thick batter. Rest for 15 minutes so the rava swells.",
+      "Chop the tomato, chillies and coriander leaves finely.",
+      "Heat a non-stick pan on medium and grease lightly. Pour a ladle of batter and spread it into a thick round.",
+      "Sprinkle the toppings and press them in gently. Drizzle oil around the edge.",
+      "Cook covered for 2-3 minutes, flip and cook 2 minutes more until golden."
+    ],
+    "tips": ["Resting the batter is essential, or the uttapam turns gritty.", "Add a splash of water if the batter thickens while resting."],
+    "substitutions": ["Add grated carrot or capsicum on top for more vegetables, unless you follow Jain rules."]
+  }
+]

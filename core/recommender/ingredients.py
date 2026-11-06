@@ -34,6 +34,11 @@ ALIASES: dict[str, str] = {
     "sabudana sago pearls": "sago", "tapioca pearls": "sago",
     "masoor dal red lentils": "masoor dal", "red lentils": "masoor dal",
     "bean": "french beans", "green beans": "french beans",
+        "bottle gourd lauki": "bottle gourd", "lauki": "bottle gourd",
+    "doodhi": "bottle gourd", "tindora ivy gourd": "tindora",
+    "ivy gourd": "tindora", "kovakkai": "tindora",
+    "ragi flour finger millet": "ragi flour", "sev gram flour noodles": "sev",
+    "nylon sev": "sev",
 }
 
 # Assumed to be in every kitchen: not counted as "missing" and not scored.
