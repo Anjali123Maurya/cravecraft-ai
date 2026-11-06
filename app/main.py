@@ -23,6 +23,7 @@ from core.safety.filter import (SafetyProfile, filter_ingredients,  # noqa: E402
                                 safe_recipes)
 from db.session import get_store  # noqa: E402
 from core.services.nutrition import estimate_nutrition  # noqa: E402
+from core.services.remix import REMIXES, remix  # noqa: E402
 
 CRAVINGS = {
     "🌶️ Spicy": "spicy", "🍋 Tangy": "tangy", "🧈 Creamy": "creamy",
@@ -154,6 +155,17 @@ if chosen_id not in adapted_cache:
     get_store().add_history(chosen_id, match.recipe.name)
 result = adapted_cache[chosen_id]
 recipe = result.recipe
+
+remix_labels = {"original": "Original recipe", **REMIXES}
+choice = st.selectbox("🎛️ Remix this recipe", list(remix_labels),
+                      format_func=remix_labels.get, key=f"remix_{chosen_id}")
+if choice != "original":
+    remixed = remix(result.recipe, choice, profile)
+    if remixed.ok:
+        recipe = remixed.recipe
+        st.success("Remix applied: " + "; ".join(remixed.changes))
+    else:
+        st.warning(remixed.message)
 
 st.markdown(ui.banner(recipe, result.used_llm), unsafe_allow_html=True)
 
