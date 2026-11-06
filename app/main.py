@@ -24,6 +24,8 @@ from core.safety.filter import (SafetyProfile, filter_ingredients,  # noqa: E402
 from db.session import get_store  # noqa: E402
 from core.services.nutrition import estimate_nutrition  # noqa: E402
 from core.services.remix import REMIXES, remix  # noqa: E402
+from PIL import Image  # noqa: E402
+from core.ai.vision import VisionUnavailable, detect_ingredients  # noqa: E402
 
 CRAVINGS = {
     "🌶️ Spicy": "spicy", "🍋 Tangy": "tangy", "🧈 Creamy": "creamy",
@@ -75,6 +77,42 @@ st.markdown("#### 🥕 What's in your kitchen?")
 pantry_text = st.text_area("Ingredients", height=90, label_visibility="collapsed",
                            placeholder="potatoes, onion, tomato, paneer, capsicum ...")
 
+scanned: list[str] = []
+with st.expander("📷 Scan ingredients from a photo (optional)"):
+    photo = st.file_uploader("Upload a photo of your ingredients",
+                             type=["jpg", "jpeg", "png"])
+    if photo is not None:
+        st.image(photo, width=260)
+        if st.button("🔍 Detect ingredients"):
+            try:
+                with st.spinner("Looking at your photo (the first run downloads "
+                                "the model, about 600 MB)..."):
+                    found = detect_ingredients(Image.open(photo))
+                names = [d.name for d in found]
+                st.session_state["scan_options"] = names
+                st.session_state["scan_picked"] = names
+                if not names:
+                    st.info("I couldn't recognise anything. Type your "
+                            "ingredients instead.")
+            except VisionUnavailable as exc:
+                st.warning(str(exc))
+    options = st.session_state.get("scan_options", [])
+    if options:
+        scanned = st.multiselect("Detected. Remove wrong ones before searching:",
+                                 options, key="scan_picked")
+        st.caption("Detection can be wrong, so check this list. Add anything "
+                   "missing in the box above.")
+
+QUICK_PICK = ["tomato", "onion", "potato", "green peas", "cauliflower",
+              "spinach", "okra", "brinjal", "carrot", "french beans",
+              "capsicum", "garlic", "ginger", "green chilli", "lemon",
+              "cabbage", "paneer", "yogurt", "milk", "rice", "toor dal",
+              "moong dal", "masoor dal", "chickpeas", "kidney beans",
+              "wheat flour", "gram flour", "peanuts", "coconut", "semolina"]
+st.markdown("**Or tap what you have:**")
+quick = st.pills("Quick pick", QUICK_PICK, selection_mode="multi",
+                 label_visibility="collapsed") or []
+
 saved_count = len(get_store().list_pantry())
 include_saved = st.checkbox(
     f"➕ Also use my saved pantry ({saved_count} item{'s' if saved_count != 1 else ''})",
@@ -87,7 +125,7 @@ picked = st.pills("Cravings", list(CRAVINGS), selection_mode="multi",
 time_label = st.selectbox("⏱️ Time available", list(TIME_OPTIONS))
 
 if st.button("🍳  Find my recipe", type="primary"):
-    items = parse_list(pantry_text)
+    items = parse_list(pantry_text) + scanned + list(quick)
     if include_saved:
         items += [i.name for i in get_store().list_pantry()]
     if not items:
