@@ -23,6 +23,7 @@ No paid APIs, no cloud, no GPU. It runs on a laptop with 8 GB of RAM.
 - **Cooking mode**: step navigation, timers detected from the recipe text, and a Q&A box.
 - **Optional photo scan** using CLIP, with a correction step because detection can miss or confuse items.
 - **Works without AI**: if Ollama is off, you get the tested recipe as written.
+- **Nutrition values** come from a small hand-built table. Four entries (oil, ghee, wheat flour, sugar) are checked against USDA FoodData Central; the rest are approximate and still being verified. Unit-to-gram weights are estimates. Spices are ignored.
 
 | Recipe page | Cooking mode |
 |---|---|
