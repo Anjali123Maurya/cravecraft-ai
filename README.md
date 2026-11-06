@@ -8,19 +8,29 @@ No paid APIs, no cloud, no GPU. It runs on a laptop with 8 GB of RAM.
 
 ![Home page](docs/screenshots/home.png)
 
-## Features
 
-- **Ingredient-based search**: type what you have, including Hindi names (tamatar, aloo, palak).
+- ## Features
+
+- **Ingredient-based search**: type, tap quick-pick chips, or scan a photo. Hindi names work (tamatar, aloo, palak).
 - **Safety-first filtering**: diets (vegetarian, eggetarian, vegan, Jain), common allergens and a free-text "avoid" list are applied before and after any AI text is generated.
-- **Real recipes, AI-tailored text**: the 1.5B model never writes ingredients or steps. It only writes the description, tips and substitutions.
-- **Smart pantry**: saved ingredients with expiry dates; items expiring soon boost matching recipes.
-- **Favorites, ratings and history** stored locally in SQLite.
-- **Cooking mode**: step navigation, progress bar, timers detected from the recipe text, and a Q&A box for kitchen problems.
-- **Works without AI**: if Ollama is off or fails, the app shows the tested recipe as written.
+- **Real recipes, AI-tailored text**: the 1.5B local model never writes ingredients or steps, only the description, tips and substitutions.
+- **32 recipes** across North Indian, Punjabi, South Indian, Gujarati and Maharashtrian cooking.
+- **Recipe remix**: vegan, spicier, milder, lighter, higher-protein and beginner-friendly, done by rules and re-checked for safety.
+- **Nutrition estimates** per serving, labelled as estimates.
+- **Weekly meal planner** with one merged shopping list.
+- **Smart pantry** with expiry dates; items expiring soon boost matching recipes.
+- **Favorites, ratings and history** in local SQLite.
+- **Cooking mode**: step navigation, timers detected from the recipe text, and a Q&A box.
+- **Optional photo scan** using CLIP, with a correction step because detection can miss or confuse items.
+- **Works without AI**: if Ollama is off, you get the tested recipe as written.
 
 | Recipe page | Cooking mode |
 |---|---|
 | ![Recipe](docs/screenshots/recipe.png) | ![Cooking](docs/screenshots/cooking.png) |
+
+| Planner | Remix |
+|---|---|
+| ![Planner](docs/screenshots/planner.png) | ![Remix](docs/screenshots/remix.png) |!(docs/screenshorts/phots.png)|
 
 ## How it works
 
@@ -54,6 +64,7 @@ cd cravecraft-ai
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+pip install -r requirements-vision.txt
 Copy-Item .env.example .env
 
 ollama pull qwen2.5:1.5b       # optional: enables AI-tailored text
@@ -68,15 +79,17 @@ python -m pytest -q
 
 ## Limitations
 
-- **Not a replacement for allergy care.** Safety checks are keyword matching on ingredient names and cannot see hidden ingredients in packaged food. Always read labels.
-- **32 recipes** written from general knowledge, not professionally tested.
+- **Not a replacement for allergy care.** Safety checks match ingredient names and cannot see hidden ingredients in packaged food. Always read labels.
+- **Recipes** are written from general knowledge and are not professionally tested.
+- **Nutrition values** come from a small hand-built table of approximate values, not yet verified against USDA FoodData Central. Spices are ignored.
+- **Photo scan** uses a general-purpose model and often misses or confuses vegetables in a pile. Treat its list as a starting point.
+- **Remix** swaps are rule-based and crude; a vegan kadhi is a different dish.
 - Timers run only while the page is open and have no sound.
 - The small local model can be wrong; its answers are labelled in the UI.
-- Nutrition values, photo ingredient detection and recipe images are not built yet.
 
 ## Roadmap
 
-Nutrition estimates from USDA data, recipe remix, photo ingredient detection, more recipes, Hindi UI.
+Verified nutrition data, optional AI food visualisation, more recipes, Hindi UI.
 
 ## License
 
