@@ -2,6 +2,9 @@
 
 ![Tests](https://github.com/Anjali123Maurya/cravecraft-ai/actions/workflows/tests.yml/badge.svg)
 
+Try it !!
+https://cravecraft-ai-ykdijweybyvpkdhd8kwk28.streamlit.app/ 
+
 A free, offline, AI-assisted Indian cooking companion. Tell it what is in your kitchen and what you are craving, and it finds a tested recipe, adapts the text to you with a **local** language model, and guides you step by step while you cook.
 
 No paid APIs, no cloud, no GPU. It runs on a laptop with 8 GB of RAM.
